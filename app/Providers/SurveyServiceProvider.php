@@ -18,7 +18,7 @@ class SurveyServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton(SurveyService::class, function ($app) {
-            return new SurveyService(Survey::find(1));
+            return new SurveyService();
         });   
     }
 

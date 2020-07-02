@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use App\Models\Survey;
 use App\Rules\BorrowerAge;
 use App\Services\SurveyService;
 use Illuminate\Console\Command;
@@ -50,6 +51,7 @@ class TestCommand extends Command
         ]);
 
         $ruleEvaluator = resolve(SurveyService::class);
+        $ruleEvaluator->addSurvey(Survey::find(1));
         $ruleEvaluator->evaluate($payload);
     }
 }

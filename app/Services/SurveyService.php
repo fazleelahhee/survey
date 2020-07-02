@@ -13,9 +13,8 @@ class SurveyService
     private $payload;
     private $reasonForDeclined;
 
-    public function __construct(Survey $survey)
+    public function __construct()
     {
-        $this->addSurvey($survey);
     }
 
     public function addSurvey(Survey $survey) 
